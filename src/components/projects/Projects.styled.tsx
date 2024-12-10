@@ -21,7 +21,7 @@ export const ProjectContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 50px; /* 카드 간의 간격 */
+  gap: 40px; /* 카드 간의 간격 */
 `;
 
 export const ProjectCard = styled.div`
@@ -29,7 +29,7 @@ export const ProjectCard = styled.div`
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 280px;
   padding: 16px;
   height: 360px;
   text-align: center;
