@@ -1,17 +1,53 @@
-import Intro from "../components/intro/Intro";
+import { forwardRef } from "react";
+import { Section } from "./ContentPage.style.tsx";
 import Profile from "../components/profile/Profile";
-import Project from "../components/project/Project";
-import TechStack from "../components/stacks/Stacks";
+import Intro from "../components/intro/Intro";
+import Project from "../components/projects/Projects.tsx";
+import Stacks from "../components/stacks/Stacks.tsx";
+import Activity from "../components/activity/Activity.tsx";
+import Certifications from "../components/certifications/Certifications.tsx";
 
-function ContentPage() {
-  return (
-    <>
-      <Profile />
-      <Intro />
-      <TechStack />
-      <Project />
-    </>
-  );
+interface ContentPageProps {
+  profileRef: React.RefObject<HTMLAnchorElement>;
+  introRef: React.RefObject<HTMLAnchorElement>;
+  stacksRef: React.RefObject<HTMLAnchorElement>;
+  projectsRef: React.RefObject<HTMLAnchorElement>;
+  activityRef: React.RefObject<HTMLAnchorElement>;
+  certificationsRef: React.RefObject<HTMLAnchorElement>;
 }
+
+const ContentPage = forwardRef<HTMLDivElement, ContentPageProps>(
+  ({
+    profileRef,
+    introRef,
+    stacksRef,
+    projectsRef,
+    activityRef,
+    certificationsRef,
+  }) => {
+    return (
+      <>
+        <Section ref={profileRef}>
+          <Profile />
+        </Section>
+        <Section ref={introRef}>
+          <Intro />
+        </Section>
+        <Section ref={stacksRef}>
+          <Stacks />
+        </Section>
+        <Section ref={projectsRef}>
+          <Project />
+        </Section>
+        <Section ref={activityRef}>
+          <Activity />
+        </Section>
+        <Section ref={certificationsRef}>
+          <Certifications />
+        </Section>
+      </>
+    );
+  }
+);
 
 export default ContentPage;

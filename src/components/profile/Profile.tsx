@@ -1,8 +1,10 @@
+import { Title, Underline } from "./Profile.styled";
+
 function Profile() {
   return (
     <>
-      <a>프로필</a>
-      Email, Github, Velog
+      <Title>PROFILE</Title>
+      <Underline />
     </>
   );
 }
