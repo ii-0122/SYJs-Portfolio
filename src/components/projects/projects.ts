@@ -4,11 +4,14 @@ export const projects = [
     title: "Study Learners",
     description: "스터디 시간 관리 및 실시간 단체 스터디룸 제공 웹 사이트",
     imageUrl: "/SYJs-Portfolio/favicon.png",
-    targetUser: "",
-    valueProposition: "",
-    coreFeatures: "",
-    role: "",
-    technologies: "",
+    targetUser: "스터디 시간을 관리해야 하는 학생이나 취업, 시험 준비생",
+    valueProposition:
+      "온라인 스터디룸을 통해 실제 공부 시간을 측정하고 통계화하여 공부 시간 관리의 효율성을 높임",
+    coreFeatures:
+      "스터디 일정 관리, 실시간 온라인 스터디룸, 스터디 시간 통계 및 순위 페이지 제공",
+    role: "FE : 실시간 스터디룸 입장, socket 연결, 타이머 구현 및 socket message error 처리 / BE : 스터디 일정 관리 페이지 할 일 CRUD API 구현, 전체적인 DB 구조 설계",
+    technologies:
+      "FE : React(Vite), TypeScript, zustand, styled-component, axios, Socket.io, recharts, Cookie / BE : Nest.js, Socket.io, Cookie, mongoose",
     implementationDetails: "",
     problemSolving: "",
     deploymentUrl: "https://study-room-fe-ii0122.vercel.app/",

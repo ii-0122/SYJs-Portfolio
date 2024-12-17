@@ -54,10 +54,10 @@ const techStacksData = [
     usage: "서버 사이드 개발",
   },
   {
-    name: "Next.js",
-    icon: "https://nextjs.org/static/favicon/favicon.ico",
+    name: "Nest.js",
+    icon: "https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.svg",
     proficiency: 4,
-    usage: "서버 사이드 렌더링 및 정적 웹사이트 생성",
+    usage: "서버 사이드 개발",
   },
   {
     name: "Socket.io",
