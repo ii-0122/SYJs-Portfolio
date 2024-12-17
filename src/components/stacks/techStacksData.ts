@@ -1,0 +1,136 @@
+const techStacksData = [
+  {
+    name: "JavaScript",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    proficiency: 4.5,
+    usage: "웹 개발 및 서버 사이드 개발",
+  },
+  {
+    name: "TypeScript",
+    icon: "/SYJs-Portfolio/typescript-icon.512x512.png",
+    proficiency: 4.5,
+    usage: "웹 개발 및 서버 사이드 개발",
+  },
+  {
+    name: "Java",
+    icon: "/SYJs-Portfolio/java-original.377x512.png",
+    proficiency: 3.5,
+    usage: "프로그램 실행 파일 및 서버 사이드 개발",
+  },
+  {
+    name: "Kotlin",
+    icon: "/SYJs-Portfolio/kotlin-original.512x512.png",
+    proficiency: 3,
+    usage: "안드로이드 애플리케이션 개발",
+  },
+  {
+    name: "Python",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+    proficiency: 3.5,
+    usage: "데이터 분석",
+  },
+  {
+    name: "C",
+    icon: "/SYJs-Portfolio/c-original.446x512.png",
+    proficiency: 3,
+    usage: "시스템 프로그래밍",
+  },
+  {
+    name: "C#",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+    proficiency: 3,
+    usage: "게임 개발",
+  },
+  {
+    name: "React",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    proficiency: 4,
+    usage: "웹 애플리케이션 개발",
+  },
+  {
+    name: "Node.js",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+    proficiency: 4,
+    usage: "서버 사이드 개발",
+  },
+  {
+    name: "Next.js",
+    icon: "https://nextjs.org/static/favicon/favicon.ico",
+    proficiency: 4,
+    usage: "서버 사이드 렌더링 및 정적 웹사이트 생성",
+  },
+  {
+    name: "Socket.io",
+    icon: "https://socket.io/images/logo.svg",
+    proficiency: 3.5,
+    usage: "실시간 웹 애플리케이션 개발",
+  },
+  {
+    name: "Spring",
+    icon: "/SYJs-Portfolio/spring.png",
+    proficiency: 3,
+    usage: "Java 기반의 웹 애플리케이션 개발",
+  },
+  {
+    name: "MySQL",
+    icon: "/SYJs-Portfolio/mysql-480.png",
+    proficiency: 4.5,
+    usage: "관계형 데이터베이스 관리 시스템",
+  },
+  {
+    name: "MariaDB",
+    icon: "/SYJs-Portfolio/mariadb.png",
+    proficiency: 4,
+    usage: "MySQL의 포크 관계형 데이터베이스",
+  },
+  {
+    name: "MongoDB",
+    icon: "/SYJs-Portfolio/mongodb.png",
+    proficiency: 4,
+    usage: "Socket.io 실시간 데이터 처리를 위한 NoSQL 데이터베이스",
+  },
+  {
+    name: "AWS S3",
+    icon: "/SYJs-Portfolio/s3.png",
+    proficiency: 3,
+    usage: "이미지 데이터 원격 저장소",
+  },
+  {
+    name: "Android Studio",
+    icon: "https://developer.android.com/studio/images/studio-icon.svg",
+    proficiency: 3.5,
+    usage: "안드로이드 애플리케이션 개발",
+  },
+  {
+    name: "Figma",
+    icon: "/SYJs-Portfolio/figma.png",
+    proficiency: 4,
+    usage: "UI/UX 디자인",
+  },
+  {
+    name: "GitHub",
+    icon: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    proficiency: 4.5,
+    usage: "버전 관리 및 협업",
+  },
+  {
+    name: "AWS EC2",
+    icon: "https://aws.amazon.com/favicon.ico",
+    proficiency: 4,
+    usage: "클라우드 서버 호스팅",
+  },
+  {
+    name: "Vercel",
+    icon: "https://vercel.com/favicon.ico",
+    proficiency: 4,
+    usage: "정적 사이트 및 서버리스 함수 배포",
+  },
+  {
+    name: "Cloudtype",
+    icon: "/SYJs-Portfolio/cloudtype.png",
+    proficiency: 4,
+    usage: "클라우드 서버 배포 및 관리",
+  },
+];
+
+export default techStacksData;

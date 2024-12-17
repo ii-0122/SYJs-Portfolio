@@ -56,13 +56,14 @@ export const DescriptionTitle = styled.p`
   font-size: 16px;
   font-weight: bold;
   color: black;
+  margin-top: 10px;
+  margin-bottom: 12px;
 `;
 
 export const DescriptionText = styled.p`
   font-size: 16px;
   color: black;
   line-height: 1.5;
-  margin: 5px 0;
 `;
 
 export const Modal = styled.div`

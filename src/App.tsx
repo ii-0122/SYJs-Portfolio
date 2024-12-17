@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import "./App.css";
-import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import ContentPage from "./pages/ContentPage";
 
@@ -41,7 +40,6 @@ const App = () => {
         activityRef={activityRef}
         certificationsRef={certificationsRef}
       />
-      <Footer />
     </>
   );
 };

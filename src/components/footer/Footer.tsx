@@ -1,7 +1,9 @@
+import { FooterContainer } from "./Fotter.styled";
+
 function Footer() {
   return (
     <>
-      <a>하단 footer</a>
+      <FooterContainer />
     </>
   );
 }

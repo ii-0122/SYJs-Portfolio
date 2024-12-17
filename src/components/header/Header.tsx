@@ -26,17 +26,8 @@ const Header: React.FC<HeaderProps> = ({
     <HeaderContainer>
       <LogoStyle>SHIN YU JEONG</LogoStyle>
       <Nav>
-        <NavLink href="#" onClick={(event) => onClick(event, profileRef)}>
-          PROFILE
-        </NavLink>
         <NavLink href="#" onClick={(event) => onClick(event, introRef)}>
           INTRODUCTION
-        </NavLink>
-        <NavLink href="#" onClick={(event) => onClick(event, stacksRef)}>
-          STACKS
-        </NavLink>
-        <NavLink href="#" onClick={(event) => onClick(event, projectsRef)}>
-          PROJECTS
         </NavLink>
         <NavLink href="#" onClick={(event) => onClick(event, activityRef)}>
           ACTIVITY
@@ -46,6 +37,15 @@ const Header: React.FC<HeaderProps> = ({
           onClick={(event) => onClick(event, certificationsRef)}
         >
           CERTIFICATIONS
+        </NavLink>
+        <NavLink href="#" onClick={(event) => onClick(event, stacksRef)}>
+          STACKS
+        </NavLink>
+        <NavLink href="#" onClick={(event) => onClick(event, projectsRef)}>
+          PROJECTS
+        </NavLink>
+        <NavLink href="#" onClick={(event) => onClick(event, profileRef)}>
+          CONTACT
         </NavLink>
       </Nav>
     </HeaderContainer>

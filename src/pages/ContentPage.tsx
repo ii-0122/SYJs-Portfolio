@@ -6,6 +6,7 @@ import Project from "../components/projects/Projects.tsx";
 import Stacks from "../components/stacks/Stacks.tsx";
 import Activity from "../components/activity/Activity.tsx";
 import Certifications from "../components/certifications/Certifications.tsx";
+import Footer from "../components/footer/Footer.tsx";
 
 interface ContentPageProps {
   profileRef: React.RefObject<HTMLAnchorElement>;
@@ -27,17 +28,8 @@ const ContentPage = forwardRef<HTMLDivElement, ContentPageProps>(
   }) => {
     return (
       <>
-        <Section ref={profileRef}>
-          <Profile />
-        </Section>
         <Section ref={introRef}>
           <Intro />
-        </Section>
-        <Section ref={stacksRef}>
-          <Stacks />
-        </Section>
-        <Section ref={projectsRef}>
-          <Project />
         </Section>
         <Section ref={activityRef}>
           <Activity />
@@ -45,6 +37,16 @@ const ContentPage = forwardRef<HTMLDivElement, ContentPageProps>(
         <Section ref={certificationsRef}>
           <Certifications />
         </Section>
+        <Section ref={stacksRef}>
+          <Stacks />
+        </Section>
+        <Section ref={projectsRef}>
+          <Project />
+        </Section>
+        <Section ref={profileRef}>
+          <Profile />
+        </Section>
+        <Footer />
       </>
     );
   }
