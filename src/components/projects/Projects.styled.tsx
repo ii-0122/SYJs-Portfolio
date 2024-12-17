@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Title = styled.div`
   text-align: left;
-  font-size: 36px; /* 제목 크기 */
+  font-size: 32px;
   font-weight: bold;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
-  margin: 0px 4vw 2px; /* 상하 여백 */
+  margin: 0px 4vw 2px;
 `;
 
 export const Underline = styled.div`
-  width: 180px;
+  width: 160px;
   height: 2px;
   background-color: black; /* 밑줄 색상 */
   margin: 0px 4vw 30px; /* 중앙 정렬 및 하단 여백 */
@@ -21,7 +21,7 @@ export const ProjectContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px; /* 카드 간의 간격 */
+  gap: 40px;
 `;
 
 export const ProjectCard = styled.div`

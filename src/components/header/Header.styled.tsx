@@ -29,7 +29,7 @@ export const Nav = styled.nav`
 export const NavLink = styled.a`
   color: gray;
   text-decoration: none; /* 밑줄 제거 */
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   display: flex; /* Flexbox 사용 */
   align-items: center;

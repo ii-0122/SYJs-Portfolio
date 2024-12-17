@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Title = styled.div`
   text-align: left;
-  font-size: 36px; /* 제목 크기 */
+  font-size: 32px;
   font-weight: bold;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
-  margin: 0px 4vw 2px; /* 상하 여백 */
+  margin: 0px 4vw 2px;
 `;
 
 export const Underline = styled.div`
-  width: 164px;
+  width: 145px;
   height: 2px;
   background-color: black;
   margin: 0px 4vw 30px;
