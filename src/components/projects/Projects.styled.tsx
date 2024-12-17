@@ -66,7 +66,7 @@ export const DescriptionText = styled.p`
   line-height: 1.5;
 `;
 
-export const Modal = styled.div`
+export const ModalOverlay = styled.div`
   display: flex;
   justify-content: center; /* 수평 가운데 정렬 */
   align-items: center; /* 수직 가운데 정렬 */
@@ -83,17 +83,69 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 20px;
+  padding: 50px;
   border-radius: 8px;
   max-width: 70%;
   max-height: 80%;
-  width: 100%; /* 너비 100% */
+  line-height: 1.5;
+  width: 100%;
   height: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 `;
 
-export const ProjectTitle = styled.div`
-  margin: 30px;
-  width: 80%;
-  height: auto;
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+`;
+
+export const ProjectTitle = styled.h2`
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+`;
+
+export const Link = styled.a`
+  line-height: 1.5;
+  color: #007bff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const SectionTitle = styled.h3`
+  margin-top: 30px;
+  font-size: 22px;
+  color: #555;
+  line-height: 1.5;
+  position: relative;
+
+  &:not(:last-child) {
+    border-bottom: 1.5px solid #ddd;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 12px;
+  }
 `;
