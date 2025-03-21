@@ -10,6 +10,7 @@ interface HeaderProps {
   stacksRef: React.RefObject<HTMLAnchorElement>;
   projectsRef: React.RefObject<HTMLAnchorElement>;
   activityRef: React.RefObject<HTMLAnchorElement>;
+  educationRef: React.RefObject<HTMLAnchorElement>;
   certificationsRef: React.RefObject<HTMLAnchorElement>;
 }
 
@@ -20,6 +21,7 @@ const Header: React.FC<HeaderProps> = ({
   stacksRef,
   projectsRef,
   activityRef,
+  educationRef,
   certificationsRef,
 }) => {
   return (
@@ -29,8 +31,11 @@ const Header: React.FC<HeaderProps> = ({
         <NavLink href="#" onClick={(event) => onClick(event, introRef)}>
           INTRODUCTION
         </NavLink>
+        <NavLink href="#" onClick={(event) => onClick(event, educationRef)}>
+          EDUCATION
+        </NavLink>
         <NavLink href="#" onClick={(event) => onClick(event, activityRef)}>
-          ACTIVITY
+          TRAINING
         </NavLink>
         <NavLink
           href="#"

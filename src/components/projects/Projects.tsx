@@ -18,23 +18,23 @@ import {
 import { projects } from "./projects.ts";
 import { AiOutlineClose } from "react-icons/ai";
 
-const Projects: React.FC = () => {
-  type Project = {
-    id: number;
-    title: string;
-    description: string;
-    imageUrl: string;
-    targetUser: string;
-    valueProposition: string;
-    coreFeatures: string;
-    role: string;
-    technologies: string;
-    implementationDetails: string;
-    problemSolving: string;
-    deploymentUrl: string;
-    githubUrl: string[];
-  };
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  targetUser: string;
+  valueProposition: string;
+  coreFeatures: string;
+  role: string;
+  technologies: string;
+  implementationDetails: string;
+  problemSolving: string;
+  deploymentUrl: string;
+  githubUrl: string[];
+};
 
+const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const handleCardClick = (project: Project) => {

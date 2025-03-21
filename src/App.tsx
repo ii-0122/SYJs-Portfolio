@@ -9,6 +9,7 @@ const App = () => {
   const stackRef = useRef<HTMLAnchorElement>(null);
   const projectsRef = useRef<HTMLAnchorElement>(null);
   const activityRef = useRef<HTMLAnchorElement>(null);
+  const educationRef = useRef<HTMLAnchorElement>(null);
   const certificationsRef = useRef<HTMLAnchorElement>(null);
 
   const handleClick = (
@@ -30,6 +31,7 @@ const App = () => {
         stacksRef={stackRef}
         projectsRef={projectsRef}
         activityRef={activityRef}
+        educationRef={educationRef}
         certificationsRef={certificationsRef}
       />
       <ContentPage
@@ -38,6 +40,7 @@ const App = () => {
         stacksRef={stackRef}
         projectsRef={projectsRef}
         activityRef={activityRef}
+        educationRef={educationRef}
         certificationsRef={certificationsRef}
       />
     </>

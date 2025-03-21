@@ -9,7 +9,7 @@ export const Title = styled.div`
 `;
 
 export const Underline = styled.div`
-  width: 124px;
+  width: 128px;
   height: 2px;
   background-color: black;
   margin: 0px 4vw 30px;

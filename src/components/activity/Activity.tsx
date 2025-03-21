@@ -16,7 +16,7 @@ const Activity = () => {
   ];
   return (
     <>
-      <Title>ACTIVITY</Title>
+      <Title>TRAINING</Title>
       <Underline />
       <ActivitiesContainer>
         {activitiesData.map((activity, index) => (

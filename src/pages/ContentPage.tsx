@@ -7,6 +7,7 @@ import Stacks from "../components/stacks/Stacks.tsx";
 import Activity from "../components/activity/Activity.tsx";
 import Certifications from "../components/certifications/Certifications.tsx";
 import Footer from "../components/footer/Footer.tsx";
+import Education from "../components/education/Education.tsx";
 
 interface ContentPageProps {
   profileRef: React.RefObject<HTMLAnchorElement>;
@@ -14,6 +15,7 @@ interface ContentPageProps {
   stacksRef: React.RefObject<HTMLAnchorElement>;
   projectsRef: React.RefObject<HTMLAnchorElement>;
   activityRef: React.RefObject<HTMLAnchorElement>;
+  educationRef: React.RefObject<HTMLAnchorElement>;
   certificationsRef: React.RefObject<HTMLAnchorElement>;
 }
 
@@ -24,12 +26,16 @@ const ContentPage = forwardRef<HTMLDivElement, ContentPageProps>(
     stacksRef,
     projectsRef,
     activityRef,
+    educationRef,
     certificationsRef,
   }) => {
     return (
       <>
         <Section ref={introRef}>
           <Intro />
+        </Section>
+        <Section ref={educationRef}>
+          <Education />
         </Section>
         <Section ref={activityRef}>
           <Activity />
