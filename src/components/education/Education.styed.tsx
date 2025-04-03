@@ -25,7 +25,6 @@ export const EducationContainer = styled.div`
   border-radius: 8px;
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   gap: 10px;
 `;
 
