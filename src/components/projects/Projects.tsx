@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import {
-  ProjectCard,
   ProjectContainer,
-  ModalContent,
-  ProjectTitle,
   ProjectImage,
-  ProjectDescription,
   Title,
   Underline,
-  DescriptionTitle,
   DescriptionText,
-  CloseButton,
-  ModalOverlay,
   Link,
   SectionTitle,
+  AccordionContent,
+  AccordionHeader,
+  Accordion,
 } from "./Projects.styled.tsx";
 import { projects } from "./projects.ts";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 
 export type Project = {
   id: number;
@@ -35,14 +31,12 @@ export type Project = {
 };
 
 const Projects: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [openProjects, setOpenProjects] = useState<number[]>([]);
 
-  const handleCardClick = (project: Project) => {
-    setSelectedProject(project);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
+  const toggleProject = (id: number) => {
+    setOpenProjects((prev) =>
+      prev.includes(id) ? prev.filter((pid) => pid !== id) : [...prev, id]
+    );
   };
 
   return (
@@ -51,64 +45,61 @@ const Projects: React.FC = () => {
       <Underline />
       <ProjectContainer>
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            onClick={() => handleCardClick(project)}
-          >
-            <ProjectImage src={project.imageUrl} alt={project.title} />
-            <ProjectDescription>
-              <DescriptionTitle>{project.title}</DescriptionTitle>
-              <DescriptionText>{project.description}</DescriptionText>
-            </ProjectDescription>
-          </ProjectCard>
-        ))}
-        {selectedProject && (
-          <ModalOverlay onClick={closeModal}>
-            <ModalContent onClick={(e) => e.stopPropagation()}>
-              <CloseButton onClick={closeModal}>
-                <AiOutlineClose />
-              </CloseButton>
-              <ProjectTitle>{selectedProject.title}</ProjectTitle>
-              <p>{selectedProject.description}</p>
+          <Accordion key={project.id}>
+            <AccordionHeader onClick={() => toggleProject(project.id)}>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <ProjectImage src={project.imageUrl} alt={project.title} />
+                <div style={{ marginLeft: "10px" }}>
+                  <strong>{project.title}</strong>
+                  <DescriptionText>{project.description}</DescriptionText>
+                </div>
+              </div>
+              {openProjects.includes(project.id) ? (
+                <AiOutlineUp />
+              ) : (
+                <AiOutlineDown />
+              )}
+            </AccordionHeader>
+            <AccordionContent isOpen={openProjects.includes(project.id)}>
               <SectionTitle>개요</SectionTitle>
-              <p>- 타겟 사용자: {selectedProject.targetUser}</p>
-              <p>- 제공 가치: {selectedProject.valueProposition}</p>
-              <p>- 핵심 기능: {selectedProject.coreFeatures}</p>
+              <p>- 타겟 사용자: {project.targetUser}</p>
+              <p>- 제공 가치: {project.valueProposition}</p>
+              <p>- 핵심 기능: {project.coreFeatures}</p>
               <SectionTitle>담당 직무</SectionTitle>
-              <p>{selectedProject.role}</p>
+              <p>{project.role}</p>
               <SectionTitle>활용 기술</SectionTitle>
-              <p>{selectedProject.technologies}</p>
+              <p>- Frontend: {project.technologies.frontend}</p>
+              <p>- Backend: {project.technologies.backend}</p>
+              <p>- DB/Infra: {project.technologies.dbInfra}</p>
               <SectionTitle>구현 사항</SectionTitle>
-              <p>{selectedProject.implementationDetails}</p>
+              <p>{project.implementationDetails}</p>
               <SectionTitle>문제 해결</SectionTitle>
-              <p>{selectedProject.problemSolving}</p>
+              <p>{project.problemSolving}</p>
               <SectionTitle>링크</SectionTitle>
-              <p>
-                {selectedProject.deploymentUrl ? (
+              {project.deploymentUrl && (
+                <p>
                   <Link
-                    href={selectedProject.deploymentUrl}
+                    href={project.deploymentUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     배포 페이지
                   </Link>
-                ) : null}
-              </p>
+                </p>
+              )}
               <p>
-                {selectedProject.githubUrl.map((url, index) => (
+                {project.githubUrl.map((url, index) => (
                   <span key={index}>
                     <Link href={url} target="_blank" rel="noopener noreferrer">
                       GitHub 링크 {index + 1}
                     </Link>
-                    {index < selectedProject.githubUrl.length - 1 && (
-                      <span> | </span>
-                    )}{" "}
+                    {index < project.githubUrl.length - 1 && <span> | </span>}
                   </span>
                 ))}
               </p>
-            </ModalContent>
-          </ModalOverlay>
-        )}
+            </AccordionContent>
+          </Accordion>
+        ))}
       </ProjectContainer>
     </>
   );

@@ -18,134 +18,79 @@ export const Underline = styled.div`
 
 export const ProjectContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  margin-left: 4vw;
 `;
 
-export const ProjectCard = styled.div`
-  background-color: #f9f9f9;
+export const Accordion = styled.div`
+  width: 100%;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  width: 280px;
+  background-color: #fff;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+`;
+
+export const AccordionHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px;
-  height: 360px;
-  text-align: center;
   cursor: pointer;
-  transition: transform 0.2s;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.2s;
 
   &:hover {
-    transform: scale(1.1);
+    background-color: #e9ecef;
   }
+`;
+
+export const AccordionContent = styled.div<{ isOpen: boolean }>`
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  border-top: 1px solid #ddd;
 `;
 
 export const ProjectImage = styled.img`
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-top: 10%;
-  max-width: 80%;
-  height: auto;
-`;
-
-export const ProjectDescription = styled.div`
-  margin-top: 6px;
-`;
-
-export const DescriptionTitle = styled.p`
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  margin-top: 10px;
-  margin-bottom: 12px;
 `;
 
 export const DescriptionText = styled.p`
-  font-size: 16px;
-  color: black;
-  line-height: 1.5;
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
 `;
 
-export const ModalOverlay = styled.div`
-  display: flex;
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-`;
-
-export const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 50px;
-  border-radius: 8px;
-  max-width: 70%;
-  max-height: 80%;
-  line-height: 1.5;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow-y: auto;
-
-  &::-webkit-scrollbar {
-    width: 1px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-`;
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: 34px;
-  right: 34px;
-  background: none;
-  border: none;
-  cursor: pointer;
+export const SectionTitle = styled.h3`
   font-size: 20px;
+  font-weight: 600;
   color: #333;
-`;
-
-export const ProjectTitle = styled.h2`
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #333;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 4px;
 `;
 
 export const Link = styled.a`
-  line-height: 1.5;
   color: #007bff;
+  font-weight: 500;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
-  }
-`;
-
-export const SectionTitle = styled.h3`
-  margin-top: 30px;
-  font-size: 22px;
-  color: #555;
-  line-height: 1.5;
-  position: relative;
-
-  &:not(:last-child) {
-    border-bottom: 1.5px solid #ddd;
-    margin-top: 10px;
-    padding: 5px;
-    margin-bottom: 12px;
   }
 `;
