@@ -10,9 +10,12 @@ import {
   AccordionContent,
   AccordionHeader,
   Accordion,
+  AccordionDescriptionText,
+  AccordionTextDiv,
 } from "./Projects.styled.tsx";
 import { projects } from "./projects.ts";
-import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { FiGithub, FiLink } from "react-icons/fi";
 
 export type Project = {
   id: number;
@@ -55,48 +58,106 @@ const Projects: React.FC = () => {
                 </div>
               </div>
               {openProjects.includes(project.id) ? (
-                <AiOutlineUp />
+                <IoIosArrowUp />
               ) : (
-                <AiOutlineDown />
+                <IoIosArrowDown />
               )}
             </AccordionHeader>
             <AccordionContent isOpen={openProjects.includes(project.id)}>
               <SectionTitle>개요</SectionTitle>
-              <p>- 타겟 사용자: {project.targetUser}</p>
-              <p>- 제공 가치: {project.valueProposition}</p>
-              <p>- 핵심 기능: {project.coreFeatures}</p>
+              <AccordionTextDiv>
+                <p>
+                  · 타겟 사용자 :{" "}
+                  <AccordionDescriptionText>
+                    {project.targetUser}
+                  </AccordionDescriptionText>
+                </p>
+                <p>
+                  · 제공 가치 :{" "}
+                  <AccordionDescriptionText>
+                    {project.valueProposition}
+                  </AccordionDescriptionText>
+                </p>
+                <p>
+                  · 핵심 기능 :{" "}
+                  <AccordionDescriptionText>
+                    {project.coreFeatures}
+                  </AccordionDescriptionText>
+                </p>
+              </AccordionTextDiv>
               <SectionTitle>담당 직무</SectionTitle>
-              <p>{project.role}</p>
+              <AccordionTextDiv>
+                <p>
+                  · FE :{" "}
+                  <AccordionDescriptionText>
+                    {project.role.fe}
+                  </AccordionDescriptionText>
+                </p>
+                <p>
+                  · BE :{" "}
+                  <AccordionDescriptionText>
+                    {project.role.be}
+                  </AccordionDescriptionText>
+                </p>
+              </AccordionTextDiv>
               <SectionTitle>활용 기술</SectionTitle>
-              <p>- Frontend: {project.technologies.frontend}</p>
-              <p>- Backend: {project.technologies.backend}</p>
-              <p>- DB/Infra: {project.technologies.dbInfra}</p>
+              <AccordionTextDiv>
+                <p>
+                  · Frontend :{" "}
+                  <AccordionDescriptionText>
+                    {project.technologies.frontend}
+                  </AccordionDescriptionText>
+                </p>
+                <p>
+                  · Backend :{" "}
+                  <AccordionDescriptionText>
+                    {project.technologies.backend}
+                  </AccordionDescriptionText>
+                </p>
+                <p>
+                  · DB / Infra :{" "}
+                  <AccordionDescriptionText>
+                    {project.technologies.dbInfra}
+                  </AccordionDescriptionText>
+                </p>
+              </AccordionTextDiv>
               <SectionTitle>구현 사항</SectionTitle>
+              <AccordionTextDiv></AccordionTextDiv>
               <p>{project.implementationDetails}</p>
               <SectionTitle>문제 해결</SectionTitle>
+              <AccordionTextDiv></AccordionTextDiv>
               <p>{project.problemSolving}</p>
               <SectionTitle>링크</SectionTitle>
-              {project.deploymentUrl && (
-                <p>
-                  <Link
-                    href={project.deploymentUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    배포 페이지
-                  </Link>
-                </p>
-              )}
-              <p>
-                {project.githubUrl.map((url, index) => (
-                  <span key={index}>
-                    <Link href={url} target="_blank" rel="noopener noreferrer">
-                      GitHub 링크 {index + 1}
+              <AccordionTextDiv>
+                {project.deploymentUrl && (
+                  <p>
+                    <Link
+                      href={project.deploymentUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      배포 페이지
+                      <FiLink />
                     </Link>
-                    {index < project.githubUrl.length - 1 && <span> | </span>}
-                  </span>
-                ))}
-              </p>
+                  </p>
+                )}
+                <p>
+                  {project.githubUrl.map((url, index) => (
+                    <span key={index}>
+                      <Link
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub 링크 {index + 1} <FiGithub />
+                      </Link>
+                      {index < project.githubUrl.length - 1 && (
+                        <AccordionDescriptionText> | </AccordionDescriptionText>
+                      )}
+                    </span>
+                  ))}
+                </p>
+              </AccordionTextDiv>
             </AccordionContent>
           </Accordion>
         ))}

@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
 export const Title = styled.div`
+  font-family: "Title";
   text-align: left;
   font-size: 32px;
   font-weight: bold;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
-  margin: 0px 4vw 2px; /* 상하 여백 */
+  margin: 0px 4vw 2px;
 `;
 
 export const Underline = styled.div`
   width: 120px;
-  height: 2px;
+  height: 1.5px;
   background-color: black;
-  margin: 0px 4vw 1.5rem; /* 중앙 정렬 및 하단 여백 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0px 4vw 1.2rem;
 `;
 
 export const TechStackContainer = styled.div`
@@ -22,7 +21,7 @@ export const TechStackContainer = styled.div`
   align-items: center;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 16px;
+  padding: 12px;
   background-color: #f9f9f9;
   margin-left: 4vw;
 `;
@@ -37,7 +36,7 @@ export const TechStackItem = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: 16px;
   border-bottom: 1px solid #e0e0e0;
 
   &:last-child {
@@ -69,7 +68,7 @@ export const Proficiency = styled.div`
 `;
 
 export const Star = styled.span<{ filled: boolean }>`
-  color: ${(props) => (props.filled ? "#FFD700" : "#e0e0e0")};
+  color: ${(props) => (props.filled ? "rgb(255, 204, 0)" : "#e0e0e0")};
   font-size: 18px;
   margin-right: 2px;
 `;
@@ -88,17 +87,19 @@ interface TabButtonProps {
 
 export const TabButton = styled.button<TabButtonProps>`
   padding: 0.8rem 1.2rem;
-  border: none;
-  background: ${(props) => (props.active ? "#222" : "#ddd")};
-  color: ${(props) => (props.active ? "#ffcc00" : "white")};
+  background: ${(props) =>
+    props.active ? "rgb(35, 35, 35)" : "rgb(247, 247, 247)"};
+  color: ${(props) =>
+    props.active ? "rgb(255, 216, 62)" : "rgb(135, 135, 135)"};
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
   &:hover {
-    background: #222;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+    background: rgb(35, 35, 35);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
       0 0 10px rgba(255, 255, 255, 0.4);
-    color: #ffcc00; /* 텍스트 색상 변경 */
+    color: rgb(255, 216, 62);
   }
 `;

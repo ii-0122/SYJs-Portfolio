@@ -16,9 +16,9 @@ const Education = () => {
       <Underline />
       <EducationContainer>
         <EducationItems>
-          <Degree>[ 학사 ] </Degree>
           <CollegeName>홍익대학교</CollegeName>
           <Major>컴퓨터공학과</Major>
+          <Degree>학사</Degree>
           <Duration>2016.03 ~ 2023.02</Duration>
         </EducationItems>
       </EducationContainer>

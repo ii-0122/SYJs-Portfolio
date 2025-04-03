@@ -14,6 +14,7 @@ export const HeaderContainer = styled.header`
 `;
 
 export const LogoStyle = styled.div`
+  font-family: "Title";
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -37,6 +38,6 @@ export const NavLink = styled.a`
     font-size: 21px;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
       0 0 10px rgba(255, 255, 255, 0.4);
-    color: #ffcc00; /* 텍스트 색상 변경 */
+    color: rgb(255, 216, 62);
   }
 `;

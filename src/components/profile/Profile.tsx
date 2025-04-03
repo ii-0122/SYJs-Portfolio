@@ -1,3 +1,4 @@
+import { GiPartyHat } from "react-icons/gi";
 import {
   BoldText,
   InfoContainer,
@@ -8,6 +9,9 @@ import {
   Title,
   Underline,
 } from "./Profile.styled";
+import { VscGithubInverted } from "react-icons/vsc";
+import { SiVelog } from "react-icons/si";
+import { ImMail4 } from "react-icons/im";
 
 function Profile() {
   return (
@@ -16,13 +20,16 @@ function Profile() {
       <Underline />
       <ProfileContainer>
         <ProfileDiv>
-          <ProfileImage src="https://via.placeholder.com/300" alt="Profile" />
+          <ProfileImage src="/SYJs-Portfolio/profile1.png" alt="Profile" />
           <InfoContainer>
             <InfoItem>
-              <BoldText>Birth: </BoldText>1997.01.22
+              <GiPartyHat />
+              <BoldText> Birth: </BoldText>
+              1997.01.22
             </InfoItem>
             <InfoItem>
-              <BoldText>Github: </BoldText>
+              <VscGithubInverted />
+              <BoldText> GitHub: </BoldText>
               <a
                 href="https://github.com/ii-0122"
                 target="_blank"
@@ -32,7 +39,8 @@ function Profile() {
               </a>
             </InfoItem>
             <InfoItem>
-              <BoldText>Velog: </BoldText>
+              <SiVelog />
+              <BoldText> Velog: </BoldText>
               <a
                 href="https://velog.io/@ii-0122"
                 target="_blank"
@@ -42,7 +50,8 @@ function Profile() {
               </a>
             </InfoItem>
             <InfoItem>
-              <BoldText>E-mail: </BoldText>laikarise@gmail.com
+              <ImMail4 />
+              <BoldText> Email: </BoldText>laikarise@gmail.com
             </InfoItem>
           </InfoContainer>
         </ProfileDiv>

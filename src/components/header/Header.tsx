@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <HeaderContainer>
-      <LogoStyle>SHIN YU JEONG</LogoStyle>
+      <LogoStyle>SYJ's</LogoStyle>
       <Nav>
         <NavLink href="#" onClick={(event) => onClick(event, introRef)}>
           INTRODUCTION
